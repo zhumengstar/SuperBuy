@@ -4,17 +4,17 @@ public class CodeMsg {
     private int code;
     private String msg;
 
-    //é€šç”¨å¼‚å¸¸
+    //Í¨ÓÃÒì³£
     public static CodeMsg SUCCESS = new CodeMsg(0, "success");
-    public static CodeMsg SERVER_ERROR = new CodeMsg(50100, "æœåŠ¡ç«¯å¼‚å¸¸");
+    public static CodeMsg SERVER_ERROR = new CodeMsg(50100, "·şÎñ¶ËÒì³£");
 
-    //ç™»å½•æ¨¡å— 502XX
+    //µÇÂ¼Ä£¿é 502XX
 
-    //å•†å“æ¨¡å— 503XX
+    //ÉÌÆ·Ä£¿é 503XX
 
-    //è®¢å•æ¨¡å— 504XX
+    //¶©µ¥Ä£¿é 504XX
 
-    //ç§’æ€æ¨¡å— 505XX
+    //ÃëÉ±Ä£¿é 505XX
 
 
     private CodeMsg(int code, String msg) {
