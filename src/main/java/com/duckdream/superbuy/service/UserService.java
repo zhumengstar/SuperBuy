@@ -3,23 +3,35 @@ package com.duckdream.superbuy.service;
 import com.duckdream.superbuy.dao.UserDao;
 import com.duckdream.superbuy.entity.User;
 import com.duckdream.superbuy.exception.GlobalException;
+import com.duckdream.superbuy.redis.RedisService;
+import com.duckdream.superbuy.redis.UserKey;
 import com.duckdream.superbuy.result.CodeMsg;
 import com.duckdream.superbuy.util.MD5Util;
+import com.duckdream.superbuy.util.UUIDUtil;
 import com.duckdream.superbuy.vo.LoginVO;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 
 @Service
 public class UserService {
 
+	public static final String COOKIE_NAME_TOKEN = "token";
+
 	@Autowired
 	UserDao userDao;
+
+	@Autowired
+	RedisService redisService;
 
 	public User getById(Long id) {
 		return userDao.getById(id);
 	}
 
-	public boolean login(LoginVO loginVO) {
+	public boolean login(HttpServletResponse response, LoginVO loginVO) {
 		if(loginVO == null) {
 			throw new GlobalException(CodeMsg.SERVER_ERROR);
 			//出现异常就抛
@@ -38,8 +50,22 @@ public class UserService {
 		if(!calcPass.equals(dbPass)) {
 			throw new GlobalException(CodeMsg.PASSWORD_ERROR);
 		}
+		//生成cookie
+		String token = UUIDUtil.uuid();
+		System.out.println(token);
+		redisService.set(UserKey.token, token, user);
+		Cookie cookie = new Cookie(COOKIE_NAME_TOKEN, token);
+		cookie.setMaxAge(UserKey.token.expireSeconds());
+		cookie.setPath("/");
+		response.addCookie(cookie);
 		return true;
 	}
 
-	
+
+	public User getByToken(String token) {
+		if(StringUtils.isEmpty(token)) {
+			return null;
+		}
+		return redisService.get(UserKey.token, token, User.class);
+	}
 }

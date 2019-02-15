@@ -16,8 +16,7 @@ public abstract class BasePrefix implements KeyPrefix {
     }
 
     public int expireSeconds() {
-        //默认0 代表永不过期
-        return 0;
+        return expireSeconds;
     }
 
     public String getPrefix() {
