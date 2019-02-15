@@ -9,6 +9,12 @@ public class CodeMsg {
     public static CodeMsg SERVER_ERROR = new CodeMsg(50100, "服务端异常");
 
     //登录模块 502XX
+    public static CodeMsg SESSION_ERROR = new CodeMsg(50210, "Session不存在或者已经失效");
+    public static CodeMsg PASSWORD_EMPTY = new CodeMsg(50211, "登录密码不能为空");
+    public static CodeMsg MOBILE_EMPTY = new CodeMsg(50212, "手机号不能为空");
+    public static CodeMsg MOBILE_ERROR = new CodeMsg(50213, "手机号格式错误");
+    public static CodeMsg MOBILE_NOT_EXIST = new CodeMsg(50214, "手机号不存在");
+    public static CodeMsg PASSWORD_ERROR = new CodeMsg(50215, "密码错误");
 
     //商品模块 503XX
 
