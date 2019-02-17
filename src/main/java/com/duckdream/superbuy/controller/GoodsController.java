@@ -1,9 +1,7 @@
 package com.duckdream.superbuy.controller;
 
 import com.duckdream.superbuy.entity.User;
-import com.duckdream.superbuy.redis.RedisService;
 import com.duckdream.superbuy.service.GoodsService;
-import com.duckdream.superbuy.service.UserService;
 import com.duckdream.superbuy.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +14,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {
-
-    @Autowired
-    UserService userService;
-
-    @Autowired
-    RedisService redisService;
 
     @Autowired
     GoodsService goodsService;

@@ -1,6 +1,7 @@
 package com.duckdream.superbuy.service;
 
 import com.duckdream.superbuy.dao.GoodsDao;
+import com.duckdream.superbuy.entity.MsGoods;
 import com.duckdream.superbuy.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,11 @@ public class GoodsService {
 
     public GoodsVO getGoodsVOByGoodsId(long goodsId) {
         return goodsDao.getGoodsVOByGoodsId(goodsId);
+    }
+
+    public void reduceStock(GoodsVO goods) {
+        MsGoods g = new MsGoods();
+        g.setGoodsId(goods.getId());
+        goodsDao.reduceStock(g);
     }
 }
