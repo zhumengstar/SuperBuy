@@ -56,16 +56,6 @@ public class UserService {
 		return true;
 	}
 
-	public void addCookie(HttpServletResponse response, String token, User user) {
-		System.out.println(token);
-		redisService.set(UserKey.token, token, user);
-		Cookie cookie = new Cookie(COOKIE_NAME_TOKEN, token);
-		cookie.setMaxAge(UserKey.token.expireSeconds());
-		cookie.setPath("/");
-		response.addCookie(cookie);
-	}
-
-
 	public User getByToken(HttpServletResponse response, String token) {
 		if(StringUtils.isEmpty(token)) {
 			return null;
@@ -77,4 +67,15 @@ public class UserService {
 		}
 		return user;
 	}
+
+	public void addCookie(HttpServletResponse response, String token, User user) {
+		System.out.println(token);
+		redisService.set(UserKey.token, token, user);
+		Cookie cookie = new Cookie(COOKIE_NAME_TOKEN, token);
+		cookie.setMaxAge(UserKey.token.expireSeconds());
+		cookie.setPath("/");
+		response.addCookie(cookie);
+	}
+
+
 }
