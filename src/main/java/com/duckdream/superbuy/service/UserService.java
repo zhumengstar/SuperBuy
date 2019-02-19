@@ -50,7 +50,7 @@ public class UserService {
 		if(!calcPass.equals(dbPass)) {
 			throw new GlobalException(CodeMsg.PASSWORD_ERROR);
 		}
-		//生成cookie
+		//生成token,将token作为cookie
 		String token = UUIDUtil.uuid();
 		addCookie(response, token, user);
 		return true;
@@ -69,10 +69,9 @@ public class UserService {
 	}
 
 	public void addCookie(HttpServletResponse response, String token, User user) {
-		System.out.println(token);
-		redisService.set(UserKey.token, token, user);
-		Cookie cookie = new Cookie(COOKIE_NAME_TOKEN, token);
-		cookie.setMaxAge(UserKey.token.expireSeconds());
+		redisService.set(UserKey.token, token, user); //存储在redis中
+		Cookie cookie = new Cookie(COOKIE_NAME_TOKEN, token); //生成cookie
+		cookie.setMaxAge(UserKey.token.expireSeconds()); //设置生存期
 		cookie.setPath("/");
 		response.addCookie(cookie);
 	}

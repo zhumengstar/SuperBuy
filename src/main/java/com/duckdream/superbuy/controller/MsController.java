@@ -1,7 +1,7 @@
 package com.duckdream.superbuy.controller;
 
 import com.duckdream.superbuy.entity.MsOrder;
-import com.duckdream.superbuy.entity.Order;
+import com.duckdream.superbuy.entity.OrderInfo;
 import com.duckdream.superbuy.entity.User;
 import com.duckdream.superbuy.result.CodeMsg;
 import com.duckdream.superbuy.service.GoodsService;
@@ -47,8 +47,8 @@ public class MsController {
             return "ms_fail";
         }
         //减库存 下订单 写入秒杀订单
-        Order orderinfo = msService.ms(user, goods);
-        model.addAttribute("orderinfo", orderinfo);
+        OrderInfo orderInfo = msService.ms(user, goods);
+        model.addAttribute("orderInfo", orderInfo);
         model.addAttribute("goods", goods);
         return "order_detail";
     }

@@ -1,7 +1,8 @@
 package com.duckdream.superbuy.service;
 
+import com.duckdream.superbuy.dao.OrderDao;
 import com.duckdream.superbuy.entity.MsOrder;
-import com.duckdream.superbuy.entity.Order;
+import com.duckdream.superbuy.entity.OrderInfo;
 import com.duckdream.superbuy.entity.User;
 import com.duckdream.superbuy.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,8 @@ public class OrderService {
     }
 
     @Transactional
-    public Order createOrder(User user, GoodsVO goods) {
-        Order orderInfo = new Order();
+    public OrderInfo createOrder(User user, GoodsVO goods) {
+        OrderInfo orderInfo = new OrderInfo();
         orderInfo.setCreateDate(new Date());
         orderInfo.setDeliveryAddrId(0L);
         orderInfo.setGoodsCount(1);
@@ -32,7 +33,7 @@ public class OrderService {
         orderInfo.setOrderChannel(1);
         orderInfo.setStatus(0); //未支付
         orderInfo.setUserId(user.getId());
-        long orderId = orderDao.insert(orderInfo);
+        long orderId = orderDao.insertOrderInfo(orderInfo);
         MsOrder msOrder = new MsOrder();
         msOrder.setOrderId(orderId);
         msOrder.setGoodsId(goods.getId());

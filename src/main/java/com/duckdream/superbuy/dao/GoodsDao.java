@@ -1,6 +1,5 @@
 package com.duckdream.superbuy.dao;
 
-import com.duckdream.superbuy.entity.MsGoods;
 import com.duckdream.superbuy.vo.GoodsVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -18,6 +17,6 @@ public interface GoodsDao {
     @Select("select g.*,mg.ms_price,mg.stock_count,mg.start_date,mg.end_date from tb_goods_ms mg left join tb_goods g on mg.goods_id = g.id where g.id = #{goodsId}")
     public GoodsVO getGoodsVOByGoodsId(@Param("goodsId")long goodsId);
 
-    @Update("update goods_ms set stock_count = stock_count - 1 where goods_id = #{goodsId}")
-    public void reduceStock(MsGoods g);
+    @Update("update tb_goods_ms set stock_count = stock_count - 1 where goods_id = #{goodsId}")
+    public void reduceStock(@Param("goodsId")long goodsId);
 }

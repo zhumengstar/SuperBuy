@@ -2,7 +2,7 @@ package com.duckdream.superbuy.entity;
 
 import java.util.Date;
 
-public class Order {
+public class OrderInfo {
 	private Long id;
 	private Long userId;
 	private Long goodsId;
