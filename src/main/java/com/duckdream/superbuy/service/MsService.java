@@ -1,14 +1,13 @@
 package com.duckdream.superbuy.service;
 
-import com.duckdream.superbuy.dao.GoodsDao;
-import com.duckdream.superbuy.entity.Goods;
 import com.duckdream.superbuy.entity.Order;
 import com.duckdream.superbuy.entity.User;
 import com.duckdream.superbuy.vo.GoodsVO;
-import com.mysql.cj.x.protobuf.MysqlxCrud;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class MsService {
 
     @Autowired

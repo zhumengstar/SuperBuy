@@ -1,8 +1,14 @@
 package com.duckdream.superbuy.service;
 
 import com.duckdream.superbuy.entity.MsOrder;
+import com.duckdream.superbuy.entity.Order;
+import com.duckdream.superbuy.entity.User;
+import com.duckdream.superbuy.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
 
 @Service
 public class OrderService {
@@ -12,5 +18,26 @@ public class OrderService {
 
     public MsOrder getMsOrderByUserIdGoods(long userId, long goodsId) {
         return orderDao.getMsOrderByUserIdGoods(userId, goodsId);
+    }
+
+    @Transactional
+    public Order createOrder(User user, GoodsVO goods) {
+        Order orderInfo = new Order();
+        orderInfo.setCreateDate(new Date());
+        orderInfo.setDeliveryAddrId(0L);
+        orderInfo.setGoodsCount(1);
+        orderInfo.setGoodsId(goods.getId());
+        orderInfo.setGoodsName(goods.getGoodsName());
+        orderInfo.setGoodsPrice(goods.getMsPrice());
+        orderInfo.setOrderChannel(1);
+        orderInfo.setStatus(0); //未支付
+        orderInfo.setUserId(user.getId());
+        long orderId = orderDao.insert(orderInfo);
+        MsOrder msOrder = new MsOrder();
+        msOrder.setOrderId(orderId);
+        msOrder.setGoodsId(goods.getId());
+        msOrder.setUserId(user.getId());
+        orderDao.insertMsOrder(msOrder);
+        return orderInfo;
     }
 }

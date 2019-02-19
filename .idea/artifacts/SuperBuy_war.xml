@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SuperBuy:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="superbuy.war">
+      <element id="artifact" artifact-name="SuperBuy:war exploded" />
+    </root>
+  </artifact>
+</component>
