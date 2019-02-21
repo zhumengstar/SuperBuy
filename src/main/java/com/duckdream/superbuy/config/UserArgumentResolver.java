@@ -37,13 +37,12 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
     //1.获得response
     //2.获取token
     //3.查询user信息,将user信息注入到User类型参数中
-	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
-				NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
 
 		HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
 		HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
 
-		//cookie>param
+		//param>cookie
 		String paramToken = request.getParameter(UserService.COOKIE_NAME_TOKEN);
 		String cookieToken = getCookieValue(request, UserService.COOKIE_NAME_TOKEN);
 		if(StringUtils.isEmpty(cookieToken) && StringUtils.isEmpty(paramToken)) {

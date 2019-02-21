@@ -17,9 +17,4 @@ public class ValidatorUtil {
         return m.matches();
     }
 
-    public static void main(String[] args) {
-        System.out.println(isMobile("12345678901"));
-        System.out.println(isMobile("1234567890"));
-    }
-
 }

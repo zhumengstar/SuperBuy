@@ -31,7 +31,7 @@ public class UserService {
 		return userDao.getById(id);
 	}
 
-	public boolean login(HttpServletResponse response, LoginVO loginVO) {
+	public String login(HttpServletResponse response, LoginVO loginVO) {
 		if(loginVO == null) {
 			throw new GlobalException(CodeMsg.SERVER_ERROR);
 			//出现异常就抛
@@ -53,7 +53,7 @@ public class UserService {
 		//生成token,将token作为cookie
 		String token = UUIDUtil.uuid();
 		addCookie(response, token, user);
-		return true;
+		return token;
 	}
 
 	public User getByToken(HttpServletResponse response, String token) {

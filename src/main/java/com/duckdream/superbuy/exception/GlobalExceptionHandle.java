@@ -19,10 +19,10 @@ public class GlobalExceptionHandle {
     @ExceptionHandler(value = Exception.class)
     public Result<String> exceptionHandler(HttpServletRequest request, Exception e) {
         if(e instanceof GlobalException) {
-            //全局拦截器器拦截异常
+            //处理自定义抛出的全局异常
             GlobalException ex = (GlobalException) e;
             return Result.error(ex.getCm());
-            //绑定异常是需要明确提示给用户的
+            //参数校验的异常是需要明确提示给用户的
         } else if(e instanceof BindException) {
             BindException ex = (BindException)e;
             List<ObjectError> errors = ex.getAllErrors(); //获取Error对象列表
