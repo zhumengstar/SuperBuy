@@ -12,4 +12,5 @@ public interface UserDao {
 
     @Select("select * from tb_user where id = #{id}")
     public User getById(@Param("id") long id);
+
 }

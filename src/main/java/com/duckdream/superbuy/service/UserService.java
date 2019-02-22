@@ -75,6 +75,4 @@ public class UserService {
 		cookie.setPath("/");
 		response.addCookie(cookie);
 	}
-
-
 }
