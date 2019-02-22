@@ -20,10 +20,11 @@ public class CodeMsg {
     //商品模块 503XX
 
     //订单模块 504XX
+    public static CodeMsg ORDER_NOT_EXIST = new CodeMsg(50400, "订单不存在");
 
     //秒杀模块 505XX
     public static CodeMsg MS_OVER = new CodeMsg(50500, "商品已经秒杀完毕");
-    public static CodeMsg REPEATE_MS = new CodeMsg(50501, "不能重复秒杀");
+    public static CodeMsg REPEATE_MS = new CodeMsg(50501, "你已经秒杀过了");
 
 
     private CodeMsg(int code, String msg) {

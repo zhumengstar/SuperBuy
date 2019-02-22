@@ -17,4 +17,6 @@ public interface OrderDao {
     @Insert("insert into tb_order_ms(user_id, goods_id, order_id) values(#{userId}, #{goodsId}, #{orderId})")
     public int insertMsOrder(MsOrder msOrder);
 
+    @Select("select * from tb_orderinfo where id = #{orderId}")
+    OrderInfo getOrderById(@Param("orderId") long orderId);
 }

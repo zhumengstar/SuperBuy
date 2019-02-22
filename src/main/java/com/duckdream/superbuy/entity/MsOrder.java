@@ -3,7 +3,7 @@ package com.duckdream.superbuy.entity;
 public class MsOrder {
 	private Long id;
 	private Long userId;
-	private Long  orderId;
+	private Long orderId;
 	private Long goodsId;
 	public Long getId() {
 		return id;

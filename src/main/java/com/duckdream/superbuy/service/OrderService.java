@@ -4,6 +4,8 @@ import com.duckdream.superbuy.dao.OrderDao;
 import com.duckdream.superbuy.entity.MsOrder;
 import com.duckdream.superbuy.entity.OrderInfo;
 import com.duckdream.superbuy.entity.User;
+import com.duckdream.superbuy.redis.OrderKey;
+import com.duckdream.superbuy.redis.RedisService;
 import com.duckdream.superbuy.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,12 @@ public class OrderService {
     @Autowired
     OrderDao orderDao;
 
+    @Autowired
+    RedisService redisService;
+
     public MsOrder getMsOrderByUserIdGoods(long userId, long goodsId) {
-        return orderDao.getMsOrderByUserIdGoods(userId, goodsId);
+        //return orderDao.getMsOrderByUserIdGoods(userId, goodsId);
+        return redisService.get(OrderKey.getMsOrderByUidGid, ""+userId+"_"+goodsId, MsOrder.class);
     }
 
     @Transactional
@@ -33,12 +39,20 @@ public class OrderService {
         orderInfo.setOrderChannel(1);
         orderInfo.setStatus(0); //未支付
         orderInfo.setUserId(user.getId());
-        long orderId = orderDao.insertOrderInfo(orderInfo);
+        orderDao.insertOrderInfo(orderInfo);
+        long orderId = orderInfo.getId();
         MsOrder msOrder = new MsOrder();
         msOrder.setOrderId(orderId);
         msOrder.setGoodsId(goods.getId());
         msOrder.setUserId(user.getId());
         orderDao.insertMsOrder(msOrder);
+
+        redisService.set(OrderKey.getMsOrderByUidGid, ""+user.getId()+"_"+goods.getId(), msOrder);
+
         return orderInfo;
+    }
+
+    public OrderInfo getOrderById(long orderId) {
+        return orderDao.getOrderById(orderId);
     }
 }
