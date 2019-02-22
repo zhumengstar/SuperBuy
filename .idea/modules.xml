@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SuperBuy.iml" filepath="$PROJECT_DIR$/SuperBuy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/superbuy.iml" filepath="$PROJECT_DIR$/superbuy.iml" />
     </modules>
   </component>
 </project>
