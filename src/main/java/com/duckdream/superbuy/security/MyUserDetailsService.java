@@ -33,7 +33,8 @@ public class MyUserDetailsService implements UserDetailsService {
         Long mobile = userService.getById(Long.valueOf(username).longValue()).getId();
 
 
-        logger.info("username：" + username);
+        logger.info("mobile：" + mobile);
+        logger.info("username：" + user.getId());
         logger.info("password:" + user.getPassword());
 
 //        String dbPass = user.getPassword();
@@ -43,9 +44,10 @@ public class MyUserDetailsService implements UserDetailsService {
 
         String password = passwordEncoder.encode(user.getPassword());
         logger.info("数据库密码是：" + password);
-        return new User(username, password,
+        return new User(String.valueOf(mobile), password,
                 true, true, true, true,
-                AuthorityUtils.commaSeparatedStringToAuthorityList(String.valueOf(user.getId())));
+                AuthorityUtils.commaSeparatedStringToAuthorityList(username));
+//        return null;
 
     }
 }

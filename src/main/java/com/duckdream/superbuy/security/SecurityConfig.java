@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        http.httpBasic()
 //        http.formLogin()
         http
-                .formLogin().loginPage("/authentication/require")
+                .formLogin()//.loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")
                 .and()
                 .authorizeRequests()

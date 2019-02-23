@@ -34,7 +34,7 @@ public class SecurityController {
             String target=savedRequest.getRedirectUrl();
 
             if(StringUtils.endsWithIgnoreCase(target,".html")){
-                redirectStrategy.sendRedirect(request,response,"/login");
+                redirectStrategy.sendRedirect(request,response,"/login.html");
             }
 
         }
