@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f87a518d-5a15-4d85-b892-e40a7956c5c9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_4_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_1_3_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_1_3_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_3_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/rabbitmq/MQConfig.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/rabbitmq/MQReceiver.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/rabbitmq/MQSender.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_1_2_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_1_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.project" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/controller/DemoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/controller/DemoController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/redis/RedisService.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/redis/RedisService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/security/MyUserDetailsService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/security/SecurityConfig.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/security/SecurityController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/security/SimpleResponse.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/superbuy.iml" afterPath="$PROJECT_DIR$/superbuy.iml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/security/MyUserDetailsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/security/SecurityConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/security/SecurityController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/security/SimpleResponse.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/login.html" afterPath="" />
-    </list>
+    <list default="true" id="f87a518d-5a15-4d85-b892-e40a7956c5c9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +47,8 @@
       <file leaf-file-name="MQReceiver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/rabbitmq/MQReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="899">
-              <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+            <state relative-caret-position="468">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#408#409#0" expanded="true" />
@@ -460,12 +429,12 @@
       <workItem from="1550839428609" duration="1021000" />
       <workItem from="1550840578139" duration="13188000" />
       <workItem from="1550909403939" duration="727000" />
-      <workItem from="1550910630249" duration="12647000" />
+      <workItem from="1550910630249" duration="12890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28949000" />
+    <option name="totallyTimeSpent" value="29192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1039" extended-state="6" />
@@ -488,7 +457,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29392624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29392624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -921,8 +890,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/rabbitmq/MQReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        <state relative-caret-position="468">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#408#409#0" expanded="true" />
