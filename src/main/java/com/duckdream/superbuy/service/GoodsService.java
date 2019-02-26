@@ -22,7 +22,8 @@ public class GoodsService {
         return goodsDao.getGoodsVOByGoodsId(goodsId);
     }
 
-    public void reduceStock(GoodsVO goods) {
-        goodsDao.reduceStock(goods.getId());
+    public boolean reduceStock(GoodsVO goods) {
+        int ret = goodsDao.reduceStock(goods.getId());
+        return ret>0;
     }
 }

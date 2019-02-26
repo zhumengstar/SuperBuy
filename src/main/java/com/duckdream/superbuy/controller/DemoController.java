@@ -38,34 +38,34 @@ public class DemoController {
         return "hello";
     }
 
-    @Autowired
-    MQSender sender;
+//    @Autowired
+//    MQSender sender;
 
-    @RequestMapping("/mq")
-    @ResponseBody
-    public Result<String> mq() {
-        sender.send("hello~");
-        return Result.success("Hi");
-    }
-
-    @RequestMapping("/mq/topic")
-    @ResponseBody
-    public Result<String> mqTopic() {
-        sender.sendTopic("hello~");
-        return Result.success("Hi");
-    }
-
-    @RequestMapping("/mq/fanout")
-    @ResponseBody
-    public Result<String> mqFanout() {
-        sender.sendFanout("hello~");
-        return Result.success("Hi");
-    }
-
-    @RequestMapping("/mq/header")
-    @ResponseBody
-    public Result<String> mqHeader() {
-        sender.sendHeader("hello~");
-        return Result.success("Hi");
-    }
+//    @RequestMapping("/mq")
+//    @ResponseBody
+//    public Result<String> mq() {
+//        sender.send("hello~");
+//        return Result.success("Hi");
+//    }
+//
+//    @RequestMapping("/mq/topic")
+//    @ResponseBody
+//    public Result<String> mqTopic() {
+//        sender.sendTopic("hello~");
+//        return Result.success("Hi");
+//    }
+//
+//    @RequestMapping("/mq/fanout")
+//    @ResponseBody
+//    public Result<String> mqFanout() {
+//        sender.sendFanout("hello~");
+//        return Result.success("Hi");
+//    }
+//
+//    @RequestMapping("/mq/header")
+//    @ResponseBody
+//    public Result<String> mqHeader() {
+//        sender.sendHeader("hello~");
+//        return Result.success("Hi");
+//    }
 }

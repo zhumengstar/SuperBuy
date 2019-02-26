@@ -27,6 +27,8 @@ public class Result<T> {
     public static <T> Result<T> error(CodeMsg cm) {
         return new Result<T>(cm);
     }
+
+
     public int getCode() {
         return code;
     }

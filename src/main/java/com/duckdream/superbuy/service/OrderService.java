@@ -22,8 +22,8 @@ public class OrderService {
     @Autowired
     RedisService redisService;
 
-    public MsOrder getMsOrderByUserIdGoods(long userId, long goodsId) {
-        //return orderDao.getMsOrderByUserIdGoods(userId, goodsId);
+    public MsOrder getMsOrderByUserIdGoodsId(long userId, long goodsId) {
+        //return orderDao.getMsOrderByUserIdGoodsId(userId, goodsId);
         return redisService.get(OrderKey.getMsOrderByUidGid, ""+userId+"_"+goodsId, MsOrder.class);
     }
 
@@ -40,9 +40,8 @@ public class OrderService {
         orderInfo.setStatus(0); //未支付
         orderInfo.setUserId(user.getId());
         orderDao.insertOrderInfo(orderInfo);
-        long orderId = orderInfo.getId();
         MsOrder msOrder = new MsOrder();
-        msOrder.setOrderId(orderId);
+        msOrder.setOrderId(orderInfo.getId());
         msOrder.setGoodsId(goods.getId());
         msOrder.setUserId(user.getId());
         orderDao.insertMsOrder(msOrder);
