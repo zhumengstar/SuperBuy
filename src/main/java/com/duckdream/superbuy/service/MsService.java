@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class MsService {
 
@@ -54,5 +56,10 @@ public class MsService {
 
     public boolean getGoodsOver(long goodsId) {
         return redisService.exists(MsKey.isGoodsOver, ""+goodsId);
+    }
+
+    public void reset(List<GoodsVO> goodsList) {
+        goodsService.resetStock(goodsList);
+        orderService.deleteOrders();
     }
 }

@@ -19,4 +19,10 @@ public interface OrderDao {
 
     @Select("select * from tb_orderinfo where id = #{orderId}")
     OrderInfo getOrderById(@Param("orderId") long orderId);
+
+    @Delete("truncate table tb_orderinfo")
+    public void deleteOrders();
+
+    @Delete("truncate table tb_order_ms")
+    public void deleteMsOrders();
 }

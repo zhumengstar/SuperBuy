@@ -5,6 +5,8 @@ import com.duckdream.superbuy.entity.User;
 import com.duckdream.superbuy.rabbitmq.MQSender;
 import com.duckdream.superbuy.rabbitmq.MsMessage;
 import com.duckdream.superbuy.redis.GoodsKey;
+import com.duckdream.superbuy.redis.MsKey;
+import com.duckdream.superbuy.redis.OrderKey;
 import com.duckdream.superbuy.redis.RedisService;
 import com.duckdream.superbuy.result.CodeMsg;
 import com.duckdream.superbuy.result.Result;
@@ -44,7 +46,9 @@ public class  MsController implements InitializingBean {
 
     @Autowired
     MQSender mqSender;
-    
+
+    private Map<Long, Boolean> localOverMap = new HashMap<Long, Boolean>();
+
 
     //系统初始化
     public void afterPropertiesSet() throws Exception {
@@ -54,19 +58,27 @@ public class  MsController implements InitializingBean {
         }
         for (GoodsVO goods : goodsList) {
             redisService.set(GoodsKey.getMsGoodsStock, ""+goods.getId(), goods.getStockCount());
+            localOverMap.put(goods.getId(), false); //初始 没结束
         }
     }
 
     @RequestMapping(value = "/do_ms", method = RequestMethod.POST)
     @ResponseBody
-    public Result<Integer> list(Model model, User user, @RequestParam("goodsId")long goodsId) {
+    public Result<Integer> ms(Model model, User user, @RequestParam("goodsId")long goodsId) {
         model.addAttribute("user", user);
         if(user == null) {
             return Result.error(CodeMsg.SESSION_ERROR);
         }
+
+        //内存标记，减少Redis访问
+        boolean over = localOverMap.get(goodsId); //false 没结束 true 结束
+        if(over) {
+            return Result.error(CodeMsg.MS_OVER);
+        }
         //预减库存
         long stock = redisService.decr(GoodsKey.getMsGoodsStock, ""+goodsId);
         if(stock < 0) {
+            localOverMap.put(goodsId, true); //结束
             return Result.error(CodeMsg.MS_OVER);
         }
         //判断是否已经秒杀到了
@@ -111,5 +123,21 @@ public class  MsController implements InitializingBean {
         }
         long result = msService.getMsResult(user.getId(), goodsId);
         return Result.success(result);
+    }
+
+
+    @RequestMapping(value="/reset", method=RequestMethod.GET)
+    @ResponseBody
+    public Result<Boolean> reset(Model model) {
+        List<GoodsVO> goodsList = goodsService.listGoodsVO();
+        for(GoodsVO goods : goodsList) {
+            goods.setStockCount(10);
+            redisService.set(GoodsKey.getMsGoodsStock, ""+goods.getId(), 10);
+            localOverMap.put(goods.getId(), false);
+        }
+        redisService.delete(OrderKey.getMsOrderByUidGid);
+        redisService.delete(MsKey.isGoodsOver);
+        msService.reset(goodsList);
+        return Result.success(true);
     }
 }
