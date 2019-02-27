@@ -69,10 +69,14 @@ JMeter
 
 ## 六、压测结果对比
 开启1000个线程循环10次同时访问
+
 ![](https://github.com/hxllhhy/SuperBuy/blob/master/TestImg/base.png)
 - 秒杀优化前 QPS=64.7
+
 ![](https://github.com/hxllhhy/SuperBuy/blob/master/TestImg/before.png)
 - 秒杀优化后 QPS=374.1
+
 ![](https://github.com/hxllhhy/SuperBuy/blob/master/TestImg/after.png)
 - 解决了超卖
+
 ![](https://github.com/hxllhhy/SuperBuy/blob/master/TestImg/data.png)
