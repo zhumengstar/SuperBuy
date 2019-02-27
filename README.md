@@ -67,8 +67,20 @@ JMeter
 3. 秒杀收到请求，先验证PathVariable
 
 ### 10. 数学公式验证码防刷
-
-### 11. 接口限流防刷
+在点击秒杀之前，先输入验证码，分散用户的请求
+1. 添加生成验证码的接口
+2. 在获取秒杀路径的时候，验证验证码
+3. ScriptEngine使用
 
 ## 六、压测结果对比
+开启1000个线程循环10次同时访问
+![](https://github.com/hxllhhy/SuperBuy/tree/master/JMeterImg/base.png)
+- 秒杀优化前 QPS=64.7
+![](https://github.com/hxllhhy/SuperBuy/tree/master/TestImg/before.png)
+- 秒杀优化后 QPS=374.1
+![](https://github.com/hxllhhy/SuperBuy/tree/master/TestImg/after.png)
+- 解决了超卖
+![](https://github.com/hxllhhy/SuperBuy/tree/master/TestImg/data.png)
+
+
 ...
