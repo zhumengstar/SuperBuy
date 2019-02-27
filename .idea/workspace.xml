@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f87a518d-5a15-4d85-b892-e40a7956c5c9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/MainApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/MainApplication.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/controller/MsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/controller/MsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/redis/MsKey.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/redis/MsKey.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/result/CodeMsg.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/result/CodeMsg.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/service/MsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/service/MsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/controller/MsController.class" afterPath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/controller/MsController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/redis/MsKey.class" afterPath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/redis/MsKey.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/result/CodeMsg.class" afterPath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/result/CodeMsg.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/service/MsService.class" afterPath="$PROJECT_DIR$/target/classes/com/duckdream/superbuy/service/MsService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" afterPath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,23 +37,40 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
+            <state relative-caret-position="31">
               <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1271">
+              <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2604">
+              <first_editor relative-caret-position="2542">
                 <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestImg/base.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -237,7 +242,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="643" />
     <option name="y" value="142" />
     <option name="width" value="1910" />
@@ -270,62 +275,6 @@
             <path>
               <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
               <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="duckdream" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="duckdream" type="462c0819:PsiDirectoryNode" />
-              <item name="superbuy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperBuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperBuy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="duckdream" type="462c0819:PsiDirectoryNode" />
-              <item name="superbuy" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -519,15 +468,15 @@
       <workItem from="1550910630249" duration="12890000" />
       <workItem from="1551165467646" duration="21242000" />
       <workItem from="1551196849875" duration="7009000" />
-      <workItem from="1551282773640" duration="893000" />
+      <workItem from="1551282773640" duration="2040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58336000" />
+    <option name="totallyTimeSpent" value="59483000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1039" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1039" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -576,16 +525,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.project" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/login.html" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/duckdream/superbuy/controller/DemoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="747">
@@ -923,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mvnw.cmd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -955,15 +886,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/superbuy.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1271">
+          <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2604">
+          <first_editor relative-caret-position="2542">
             <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestImg/base.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
